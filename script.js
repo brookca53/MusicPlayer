@@ -13,29 +13,46 @@ const nextBtn = document.getElementById('next');
 // Music
 const songs = [
     {
-        name: 'jacinto-1',
-        displayName: 'Electric Chill Machine',
-        artist: 'Jacinto Design',
-    },
-    {
-        name: 'jacinto-2',
-        displayName: 'Seven Nation Army (Remix)',
-        artist: 'Jacinto Design',
-    },
-    {
-        name: 'jacinto-3',
-        displayName: 'Goodnight, Disco Queen',
-        artist: 'Jacinto Design',
-    },
-    {
-        name: 'metric-1',
+        name: 'metric-1.mp3',
+        albumArt: 'metric-1.jpg',
         displayName: 'Front Row, (Remix)',
         artist: 'Jacinto Design',
     },
     {
-        name: 'dixie',
+        name: 'dixie.mp3',
+        albumArt: 'dixie.jpg',
         displayName: 'Wide Open Spaces',
         artist: 'Dixie Chix',
+    },
+    {
+        name: 'nowhere-to-run.m4a',
+        albumArt: 'nowhere-to-run.jpg',
+        displayName: 'Nowhere To Run',
+        artist: 'Matha Reeves & The Vandellas',
+    },
+    {
+        name: 'the-love-you-save.m4a',
+        albumArt: 'jackson5-the-ultimate-collection.jpg',
+        displayName: 'The Love You Save',
+        artist: 'Jackson 5',
+    },
+    {
+        name: 'i-cant-get-next-to-you.m4a',
+        albumArt: 'temptations-my-girl-the-very-best-of.jpg',
+        displayName: 'I Can\'t Get Next To You',
+        artist: 'The Temptations',
+    },
+    {
+        name: 'i-want-you-back.m4a',
+        albumArt: 'jackson5-the-ultimate-collection.jpg',
+        displayName: 'I Want You Back',
+        artist: 'Jackson 5',
+    },
+    {
+        name: 'my-girl.m4a',
+        albumArt: 'temptations-my-girl-the-very-best-of.jpg',
+        displayName: 'My Girl',
+        artist: 'The Temptations',
     },
 ];
 
@@ -65,8 +82,8 @@ playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 function loadSong(song) {
     title.textContent = song.displayName;
     artist.textContent = song.artist;
-    music.src = `music/${song.name}.mp3`;
-    image.src = `img/${song.name}.jpg`;
+    music.src = `music/${song.name}`;
+    image.src = `img/${song.albumArt}`;
 }
 
 // Current Song
